@@ -1,11 +1,9 @@
 {
   "name": "soundboard",
   "version": "0.0.1",
-  "description": "A soundboard based on the Web Audio spi",
+  "description": "A soundboard based on the Web Audio API",
   "main": "gulpfile.js",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-eslint": "^6.1.2",
@@ -27,7 +25,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-
+    "start": "gulp"
   },
   "author": "Christiaan Stegeman",
   "license": "ISC"
