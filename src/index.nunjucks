@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Soundboard</title>
+    <link href="css/base.css" rel="stylesheet">
+</head>
+<body>
+
+<section>
+    <h1>Soundboard</h1>
+
+    <h2>Settings</h2>
+
+    <div class="field">
+        <label for="playSpeed-1">Speed: </label>
+        {% for key, step in settings|dictsort %}
+            <div class="radio">
+                <input type="radio" name="playSpeed" value="{{ key }}"
+                    id="playSpeed-{{ loop.index }}" {% if key == 1 %} checked {% endif %} data-play-speed>
+                <label for="playSpeed-{{ loop.index }}">{{ step }}</label>
+            </div>
+        {% endfor %}
+    </div>
+
+    <p>
+        <label for="playBackwards">Reversed: </label>
+        <input type="checkbox" data-play-backwards name="playBackwards" id="playBackwards">
+    </p>
+
+    <ul>
+        {% for title, path in data|dictsort %}
+            {% if path | length %}
+            <li><button value="/mp3/{{ path }}">{{ title }}</button></li>
+            {% else %}
+            <li class="toggle">
+                <h2>{{ title }}</h2>
+                <ul>
+                {% for title, path in path %}
+                <li><button value="/mp3/{{ path }}">{{ title }}</button></li>
+                {% endfor %}
+            </li></ul>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+
+<script src="js/base.js"></script>
+</body>
+</html>
