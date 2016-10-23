@@ -8,6 +8,8 @@ Clone the repository to your local machine
 
 ## Local dependencies
 
+Place soundfiles (wav/mp3) in ./src/mp3 and after that run:
+
 `npm install`
 
 ## Running the environment
