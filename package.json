@@ -14,6 +14,7 @@
     "eslint": "^3.1.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-batch": "^1.0.5",
     "gulp-data": "^1.2.1",
     "gulp-directory-map": "^0.1.3",
     "gulp-nunjucks": "^2.2.0",
@@ -28,5 +29,9 @@
     "start": "gulp"
   },
   "author": "Christiaan Stegeman",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cstegeman/Soundboard.git"
+  },
   "license": "ISC"
 }

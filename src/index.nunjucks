@@ -40,7 +40,8 @@
                 {% for title, path in path %}
                 <li><button value="/mp3/{{ path }}">{{ title }}</button></li>
                 {% endfor %}
-            </li></ul>
+                </ul>
+            </li>
             {% endif %}
         {% endfor %}
     </ul>
