@@ -31,7 +31,7 @@
 
     <ul>
         {% for title, path in data|dictsort %}
-            {% if path | length %}
+            {% if path | length === 0 %}
             <li><button value="/mp3/{{ path }}">{{ title }}</button></li>
             {% else %}
             <li class="toggle">
